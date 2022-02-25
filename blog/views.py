@@ -3,25 +3,11 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Post
-import time
-import csv
+
 #class based views
 #what is list view? which i had imported ????
-file = open('com.csv')
 
-csvreader= csv.reader(file)
-print(csvreader)
 
-with open(path) as f:
-    reader = csv.reader(f)
-    for row in reader:
-        _, created = Teacher.objects.get_or_create(
-            first_name=row[0],
-            last_name=row[1],
-            middle_name=row[2],
-            )
-        # creates a tuple of the new object or
-        # current object and a boolean of if it was created
 
 def home(request):
     context = {
